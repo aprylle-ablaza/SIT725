@@ -6,7 +6,23 @@ function changeText() {
  
     document.getElementById("heading").innerHTML = textsArray[number];
 }
+
+function changeBackground() {
+    var red = getRandomNumberBetween(0, 255);
+    var green = getRandomNumberBetween(0, 255);
+    var blue = getRandomNumberBetween(0, 255);
+    var color = "rgb(" + red + "," + green + "," + blue + ")";
+    
+    console.log(color);
+    var heading = document.getElementById("heading");
+    heading.style.color = color;
+}
  
 function getRandomNumberBetween(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function changeHeading() {
+    changeText();
+    changeBackground();
 }
