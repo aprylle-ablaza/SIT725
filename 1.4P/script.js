@@ -7,13 +7,14 @@ function changeText() {
     document.getElementById("heading").innerHTML = textsArray[number];
 }
 
-function changeBackground() {
+// This function was added to supplement the code given by our tutor during the workshop and to showcase a javascript functionality that I created myself
+
+function changeTextColor() {
     var red = getRandomNumberBetween(0, 255);
     var green = getRandomNumberBetween(0, 255);
     var blue = getRandomNumberBetween(0, 255);
     var color = "rgb(" + red + "," + green + "," + blue + ")";
     
-    console.log(color);
     var heading = document.getElementById("heading");
     heading.style.color = color;
 }
@@ -24,5 +25,5 @@ function getRandomNumberBetween(min, max) {
 
 function changeHeading() {
     changeText();
-    changeBackground();
+    changeTextColor();
 }
