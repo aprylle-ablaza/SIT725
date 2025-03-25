@@ -1,0 +1,17 @@
+body {
+    background-color: cadetblue;
+    color: white;
+}
+.logo {
+    width: 75px;
+    height: 75px;
+}
+
+.btn {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#modal1 {
+    color: black;
+}
