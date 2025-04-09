@@ -1,0 +1,46 @@
+.logo {
+    width: 75px;
+    height: 75px;
+}
+
+.btn {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#modal1 {
+    color: black;
+}
+
+.album-img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#album-content-container {
+    width: 30% !important;
+    transition: width 0.3s ease; /* Smooth transition */
+  }
+  
+@media screen and (max-width: 992px) {
+    #album-content-container {
+      width: 60% !important;
+    }
+}
+  
+
+@media screen and (max-width: 600px) {
+    #album-content-container {
+      width: 90% !important;
+    }
+}
+  
+
+@media screen and (max-width: 400px) {
+    #album-content-container {
+      width: 100% !important;
+    }
+}
+  

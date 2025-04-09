@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/album.css">
+    <title>Album Information</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper navbar-size">
+          <a href="/" class="brand-logo logo"><img src="images/file.svg" alt="logo"></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a class="modal-trigger" href="#form-modal">Add Album</a></li>
+          </ul>
+        </div>
+    </nav>   
+    <div id="form-modal" class="modal">
+        <div class="modal-content">
+          <h4>Have an album in mind?</h4>
+          <p>Fill out this form, and we'll add it to our database</p>
+          <form action="/albums" method="POST" class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="album" type="text" class="validate" name="album">
+                <label for="album">Album Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="artist" type="text" class="validate" name="artist">
+                <label for="artist">Artist Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="year" type="text" class="validate" name="year">
+                <label for="year">Released Year</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="album-cover" type="text" class="validate" name="albumCover">
+                <label for="album-cover">Album Cover URL</label>
+              </div>
+            </div>
+            <button class="btn waves-effect waves-light" type="submit">Add Album
+            </button>
+          </form>
+        </div>
+    </div>
+    <div class="container" id="album-content-container">
+        <div class="section">
+          <div class="card album-card">
+            <div class="card-image" id="card-album-cover">
+            </div>
+            <div class="card-content">
+              <h5 id="album-title" class="teal-text text-darken-4"></h5>
+              <p><strong>Artist:</strong> <span id="album-artist"></span></p>
+              <p><strong>Year:</strong> <span id="album-year"></span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="js/album.js"></script>
+</html>
