@@ -6,7 +6,7 @@ exports.getAllAlbums = async (req, res) => {
 }
 
 exports.addAlbum = async (req, res) => {
-    const {album, artist, year, albumCover} = albumInfo
+    const {album, artist, year, albumCover} = req.body
     await Album.insertMany([{album: album, artist: artist, year: year, album_cover_url: albumCover}])
     res.redirect('/')
 }
