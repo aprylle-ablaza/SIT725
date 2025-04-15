@@ -1,0 +1,25 @@
+{
+  "name": "4.2p",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "npx mocha tests/**/*.js",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "chai": "^5.2.0",
+    "express": "^4.21.2",
+    "mocha": "^11.1.0",
+    "mongoose": "^8.13.1",
+    "nodemon": "^3.1.9",
+    "request": "^2.88.2",
+    "supertest": "^7.1.0"
+  },
+  "devDependencies": {
+    "yargs-parser": "^21.1.1"
+  }
+}
