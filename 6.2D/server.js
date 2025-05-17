@@ -3,9 +3,10 @@ const bodyParser = require('body-parser')
 const albumRouter = require('./routes/albumRoutes')
 const path = require('path');
 const app = express();
+
 const PORT = process.env.PORT || 3000;
 
-
+app.set('strict routing', true);
 app.use(express.json());
 app.use(bodyParser.urlencoded());
 app.use(express.static(path.join(__dirname, 'public')));

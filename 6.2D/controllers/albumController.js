@@ -6,7 +6,6 @@ exports.getAllAlbums = async (req, res) => {
         const albums = await Album.find();
         res.json({ albums: albums });
     } catch (error) {
-        console.error("Error fetching all albums:", error);
         res.status(500).json({ message: "An error occurred while fetching albums." });
     }
 };
@@ -21,7 +20,6 @@ exports.addAlbum = async (req, res) => {
         await Album.insertMany([{ album, artist, year, album_cover_url: albumCover }]);
         res.redirect('/');
     } catch (error) {
-        console.error("Error adding album:", error);
         res.status(500).json({ message: "An error occurred while adding the album." });
     }
 };
@@ -29,10 +27,7 @@ exports.addAlbum = async (req, res) => {
 exports.getAlbum = async (req, res) => {
     try {
         const albumId = req.params.id;
-        if (!albumId) {
-            return res.status(400).json({ message: "Album ID is required." });
-        }
-
+        
         const album = await Album.findById(albumId);
         if (!album) {
             return res.status(404).json({ message: "Album not found." });
@@ -40,13 +35,11 @@ exports.getAlbum = async (req, res) => {
 
         res.json({ album: album });
     } catch (error) {
-        console.error("Error fetching album:", error);
         res.status(500).json({ message: "An error occurred while fetching the album." });
     }
 };
 
 exports.updateAlbum = async (req, res) => {
-    console.log('hello')
     try {
         const albumId = req.params.id;
         const { album, artist, year, albumCover } = req.body;
