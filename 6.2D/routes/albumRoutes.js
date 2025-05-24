@@ -9,5 +9,3 @@ router.delete('/:id', albumController.deleteAlbum);
 router.get('/', albumController.getAllAlbums);
 
 module.exports = router;
-
-router.delete('/:id', )
